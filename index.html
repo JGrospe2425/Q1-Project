@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Leather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            margin-top: 2rem;
+            min-height: 100vh;
+        }
+
+        /* Home Section */
+        #home {
+            background-image: url('https://cdn.pixabay.com/photo/2016/06/25/12/50/handbag-1478814_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 6rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: grey;
+            color: white;
+            padding: 1rem;
+        }
+
+        /* Common Image Section */
+        .character-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .character-box {
+                gap: 20px;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                max-width: 200px;
+            }
+        }
+
+        /* Form Styles */
+        form {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-header {
+            margin-bottom: 20px;
+        }
+
+        .form-header img {
+            width: 100px; /* Set a specific width for the avatar */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make it circular */
+            border: 2px solid #333; /* Optional: add a border */
+        }
+
+        form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2rem;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #575757;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            margin-top: 10%;
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+            <li><a href="#handbags">Handbags</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#signup">Signup</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Section 1: Home -->
+    <section id="home" class="section">
+        <h1>Luxe Leather</h1>
+    </section>
+
+    <!-- Section 2: Bestsellers -->
+    <section id="bestsellers" class="section">
+        <h2>Bestsellers</h2>
+        <div class="character-box">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/6f/79/6f/6f796f03eff010aa8ceb52157dd725be.jpg" alt="Chic Cream Classic" />
+                <p>Chic Cream Classic ($7,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/a5/1a/67/a51a67ba9e10b8a566fba7b7d01a8954.jpg" alt="Timeless Two-Tone" />
+                <p>Timeless Two-Tone ($5,000)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/df/19/31/df1931e5b4e30509aeb8cecb6a15bf30.jpg" alt="Allure in Black" />
+                <p>Allure in Black ($6,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/41/a3/58/41a35883b50d37f7ebef9155dcafc72b.jpg" alt="Sleek Noir Tote" />
+                <p>Sleek Noir Tote ($6,000)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Handbags -->
+    <section id="handbags" class="section">
+        <h2>Handbags</h2>
+        <div class="character-box">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/17/78/2a/17782a2e977fa9f4681b730a89d7c8b5.jpg" alt="Black Panther" />
+                <p>Black Panther ($7,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/a7/a1/67/a7a1675558cd804a0479bfa24b342ebd.jpg" alt="Clear Skies" />
+                <p>Clear Skies ($5,000)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/7c/28/19/7c2819d07c0daa31e8abcfa37641d55d.jpg" alt="Bow White" />
+                <p>Bow White ($6,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/5d/63/d1/5d63d11e93112a7ce557849648792a08.jpg" alt="Mud Pool" />
+                <p>Mud Pool ($6,000)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/55/37/4b/55374bcecc3e4b834eb8c865b5636b5d.jpg" alt="Clean Cut" />
+                <p>Clean Cut ($7,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/65/99/22/659922917d27bf1b3edd646cb2bba175.jpg" alt="Heaven's Angel" />
+                <p>Heaven's Angel ($5,000)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/2d/b1/19/2db119204d9fe4f23812f6bc564955a5.jpg" alt="Black Cat" />
+                <p>Black Cat ($6,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/a2/a7/d0/a2a7d0e3100ea53b33e047517e6bfc4c.jpg" alt="Grayson Back" />
+                <p>Grayson Back ($6,000)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/dd/ba/90/ddba90e0887ea95f4d879f875b9dfffb.jpg" alt="Mix-n-Match" />
+                <p>Mix-n-Match ($6,500)</p>
+            </div>
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/67/5a/b1/675ab1ddb45e1bbd4c7fad89ee0ef787.jpg" alt="Pearl Harbor" />
+                <p>Pearl Harbor ($6,000)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Login -->
+    <section id="login" class="section">
+        <h2>Login</h2>
+        <div class="container">
+            <form>
+                <div class="form-header">
+                    <img src="https://cdl.ucf.edu/wp-content/uploads/2021/07/Blank-ID-avatar.png" alt="User Avatar">
+                </div>
+                <label>Username:</label>
+                <input type="text" placeholder="Enter your username" required>
+                <label>Password:</label>
+                <input type="password" placeholder="Enter your password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 5: Signup -->
+    <section id="signup" class="section">
+        <h2>Signup</h2>
+        <form action="#" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <input type="submit" value="Signup">
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <p> 9 Sapphire | Jillian Grospe</p>
+</footer>
+
+</body>
+</html>
